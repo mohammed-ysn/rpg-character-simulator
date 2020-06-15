@@ -1,1 +1,1 @@
-# rpg-character-simulator
+# RPG Character Simulator
