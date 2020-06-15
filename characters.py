@@ -20,6 +20,16 @@ class Character:
             new_name += '-' if i != 2 else ''
         return new_name
 
+    def display_stats(self):
+        print('-' * 20)
+        print('{} stats'.format(self.name))
+        print('-' * 20)
+        print('Type: {}'.format(self.character_type))
+        print('Health: {}'.format(self.health))
+        print('Power: {}'.format(self.power))
+        print('Special attack power: {}'.format(self.sp_attack_pwer))
+        print('Speed: {}\n'.format(self.speed))
+
 
 class Barbarian(Character):
     def __init__(self):
