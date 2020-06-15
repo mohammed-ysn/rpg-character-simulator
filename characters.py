@@ -30,6 +30,24 @@ class Character:
         print('Special attack power: {}'.format(self.sp_attack_pwer))
         print('Speed: {}\n'.format(self.speed))
 
+    def set_name(self, name):
+        self.name = name
+
+    def set_character_type(self, character_type):
+        self.character_type = character_type
+
+    def set_health(self, health):
+        self.health = health
+
+    def set_power(self, power):
+        self.power = power
+
+    def set_sp_attack_pwer(self, sp_attack_pwer):
+        self.sp_attack_pwer = sp_attack_pwer
+
+    def set_speed(self, speed):
+        self.speed = speed
+
 
 class Barbarian(Character):
     def __init__(self):
