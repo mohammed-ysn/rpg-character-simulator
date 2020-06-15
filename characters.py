@@ -44,3 +44,7 @@ class Dragon(Character):
 class Knight(Character):
     def __init__(self):
         super(Knight, self).__init__('Knight', 60, 10, 60)
+
+
+if __name__ == "__main__":
+    print('Run app.py')
