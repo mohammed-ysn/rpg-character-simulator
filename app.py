@@ -37,14 +37,18 @@ class Simulator:
                 option = int(input('\nOption (1-10): '))
                 if not 1 <= option <= 10:
                     raise ValueError
-                character = self.character_set[option - 1]
-                character.display_stats()
+                self.character_set[option - 1].display_stats()
+                attribute = input('\nAttribute to edit: ').lower()
+                value = input('\nNew value: ')
+                if attribute in ['health', 'power', 'special attack power', 'speed']:
+                    int(value)
                 attribute = {'type': 'character_type',
                              'health': 'health',
                              'power': 'power',
                              'special attack power': 'sp_attack_power',
-                             'speed': 'speed'}[input('\nAttribute to edit: ').lower()]
-                setattr(character, attribute, input('New value: '))
+                             'speed': 'speed'}[attribute]
+                setattr(self.character_set[option - 1],
+                        attribute, value)
             elif option == 3:
                 print('In progress')
             elif option == 4:
@@ -52,9 +56,7 @@ class Simulator:
             else:
                 raise ValueError
         except ValueError:
-            print('\nYou entered an invalid option.')
-        except KeyError:
-            print('\nYou entered an invalid attribute.')
+            print('\nInvalid input.')
 
 
 def main():
