@@ -37,16 +37,16 @@ class Character:
         self.character_type = character_type
 
     def set_health(self, health):
-        self.health = health
+        self.health = int(health)
 
     def set_power(self, power):
-        self.power = power
+        self.power = int(power)
 
     def set_sp_attack_pwer(self, sp_attack_pwer):
-        self.sp_attack_pwer = sp_attack_pwer
+        self.sp_attack_pwer = int(sp_attack_pwer)
 
     def set_speed(self, speed):
-        self.speed = speed
+        self.speed = int(speed)
 
 
 class Barbarian(Character):
