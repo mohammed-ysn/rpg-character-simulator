@@ -27,7 +27,7 @@ class Character:
         print('Type: {}'.format(self.character_type))
         print('Health: {}'.format(self.health))
         print('Power: {}'.format(self.power))
-        print('Special attack power: {}'.format(self.sp_attack_pwer))
+        print('Special attack power: {}'.format(self.sp_attack_power))
         print('Speed: {}'.format(self.speed))
 
     def set_name(self, name):
@@ -42,8 +42,8 @@ class Character:
     def set_power(self, power):
         self.power = power
 
-    def set_sp_attack_pwer(self, sp_attack_pwer):
-        self.sp_attack_pwer = sp_attack_pwer
+    def set_sp_attack_power(self, sp_attack_power):
+        self.sp_attack_power = sp_attack_power
 
     def set_speed(self, speed):
         self.speed = speed
