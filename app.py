@@ -50,7 +50,7 @@ class Simulator:
                 setattr(self.character_set[option - 1],
                         attribute, value)
             elif option == 3:
-                print('In progress')
+                print('\nOption in progress')
             elif option == 4:
                 self.show_menu_again = False
             else:
