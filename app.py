@@ -1,5 +1,5 @@
-import characters
 import random
+import characters
 
 
 class Simulator:
@@ -14,24 +14,28 @@ class Simulator:
     def generate_characters(self):
         return random.choice(self.classes)()
 
-    def display_character_set(self):
-        for character in self.character_set:
-            character.display_stats()
-
     def main_menu(self):
         try:
-            print('-' * 20)
+            print('\n' + '-' * 20)
             print('Menu')
             print('-' * 20)
             print('1) Display characters')
             print('2) Edit characters')
             print('3) Export characters')
-            print('4) End program\n')
-            option = int(input('Option (1-4): '))
+            print('4) End program')
+            option = int(input('\nOption (1-4): '))
             if option == 1:
-                print('In progress')
+                for character in self.character_set:
+                    character.display_stats()
             elif option == 2:
-                print('In progress')
+                print()
+                for i, character in enumerate(self.character_set):
+                    print('{}) {}'.format(i + 1, character.name))
+                option = int(input('\nOption (1-10): '))
+                if not 1 <= option <= 10:
+                    raise ValueError
+                character = self.character_set[option - 1]
+                character.display_stats()
             elif option == 3:
                 print('In progress')
             elif option == 4:
@@ -39,7 +43,7 @@ class Simulator:
             else:
                 raise ValueError
         except ValueError:
-            print('You entered an invalid option.\n')
+            print('You entered an invalid option.')
 
 
 def main():
